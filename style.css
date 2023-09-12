@@ -1,8 +1,22 @@
-button{
-    background-color: green;
+html{
+    
 }
 
-.topLeft{
-    color: blue;
-    height: 1000px;
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    width: 320px;
+    padding: 100px;
+
+}
+
+.ButtonContainer{
+    
+}
+
+button{
+    background-color: white;
+    border-radius: 5px;
 }
