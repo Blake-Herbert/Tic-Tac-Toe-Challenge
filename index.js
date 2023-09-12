@@ -22,10 +22,10 @@ let currentPlayer = "x";
 ////////////////////////////////
 
 function ClaimSpace(Event, SelectedButton) {
-    console.log(Event.target.id);
-    if (Event.target.id.innerText != "x" && Event.target.id.innerText != "o") {
+    //console.log(Event.target.id);
+    if (Event.target.innerText != "x" && Event.target.innerText != "o") {
         Event.target.innerText = currentPlayer;
-        CheckWinCondition;
+        CheckWinCondition();
 
         if (currentPlayer == "x") {
             currentPlayer = "o";
@@ -35,17 +35,21 @@ function ClaimSpace(Event, SelectedButton) {
 }
 
 
-function CheckWinCondition() {
-    if (document.getElementById("b1").innerText = document.getElementById("b2").innerText
-        // currentPlayer == document.getElementById("b1").innerText == document.getElementById("b2").innerText == document.getElementById("b3").innerText ||
-        // currentPlayer == document.getElementById("b1").innerText == document.getElementById("b5").innerText == document.getElementById("b9").innerText ||
-        // currentPlayer == document.getElementById("b1").innerText == document.getElementById("b4").innerText == document.getElementById("b7").innerText ||
-        // currentPlayer == document.getElementById("b2").innerText == document.getElementById("b5").innerText == document.getElementById("b8").innerText ||
-        // currentPlayer == document.getElementById("b3").innerText == document.getElementById("b5").innerText == document.getElementById("b7").innerText ||
-        // currentPlayer == document.getElementById("b3").innerText == document.getElementById("b6").innerText == document.getElementById("b9").innerText ||
-        // currentPlayer == document.getElementById("b4").innerText == document.getElementById("b5").innerText == document.getElementById("b6").innerText ||
-        // currentPlayer == document.getElementById("b7").innerText == document.getElementById("b8").innerText == document.getElementById("b9").innerText
-    ) {
-        console.log("win");
-    }
+function CheckWinCondition() 
+{
+    if( b1.innerText != "." && b1.innerText == b2.innerText && b2.innerText == b3.innerText ||
+        b1.innerText != "." && b1.innerText == b5.innerText && b5.innerText == b9.innerText ||
+        b1.innerText != "." && b1.innerText == b4.innerText && b4.innerText == b7.innerText ||
+        b2.innerText != "." && b2.innerText == b5.innerText && b5.innerText == b8.innerText ||
+        b3.innerText != "." && b3.innerText == b5.innerText && b5.innerText == b7.innerText ||
+        b3.innerText != "." && b3.innerText == b6.innerText && b6.innerText == b9.innerText ||
+        b4.innerText != "." && b4.innerText == b5.innerText && b5.innerText == b6.innerText ||
+        b7.innerText != "." && b7.innerText == b8.innerText && b8.innerText == b9.innerText
+        )
+        {
+            
+            console.log("win");
+        }
+
+    
 }
