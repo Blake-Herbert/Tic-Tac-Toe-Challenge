@@ -25,7 +25,7 @@ function ClaimSpace(Event, SelectedButton) {
     //console.log(Event.target.id);
     if (Event.target.innerText != "x" && Event.target.innerText != "o") {
         Event.target.innerText = currentPlayer;
-        CheckWinCondition();
+        CheckWinCondition(currentPlayer);
 
         if (currentPlayer == "x") {
             currentPlayer = "o";
@@ -48,10 +48,24 @@ function CheckWinCondition()
         )
         {
             
-            console.log("win");
-            alert("Game Over");
+            alert("Player " + currentPlayer.toUpperCase() + " wins!");
+            ClearBoard();
+            
             
         }
 
     
+}
+
+function ClearBoard() 
+{
+    b1.innerText = ".";
+    b2.innerText = ".";
+    b3.innerText = ".";
+    b4.innerText = ".";
+    b5.innerText = ".";
+    b6.innerText = ".";
+    b7.innerText = ".";
+    b8.innerText = ".";
+    b9.innerText = ".";
 }
