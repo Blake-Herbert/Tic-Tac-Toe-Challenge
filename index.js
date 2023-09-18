@@ -17,6 +17,9 @@ b8.addEventListener("click", ClaimSpace);
 const b9 = document.getElementById("b9");
 b9.addEventListener("click", ClaimSpace);
 
+const ClearBoardButton = document.getElementById("ClearBoardButton");
+ClearBoardButton.addEventListener("click",ClearBoard);
+
 let currentPlayer = "x";
 
 ////////////////////////////////
@@ -52,13 +55,13 @@ function CheckWinCondition()
 
 function ClearBoard() 
 {
-    b1.innerText = ".";
-    b2.innerText = ".";
-    b3.innerText = ".";
-    b4.innerText = ".";
-    b5.innerText = ".";
-    b6.innerText = ".";
-    b7.innerText = ".";
-    b8.innerText = ".";
-    b9.innerText = ".";
+    b1.innerText = "";
+    b2.innerText = "";
+    b3.innerText = "";
+    b4.innerText = "";
+    b5.innerText = "";
+    b6.innerText = "";
+    b7.innerText = "";
+    b8.innerText = "";
+    b9.innerText = "";
 }
