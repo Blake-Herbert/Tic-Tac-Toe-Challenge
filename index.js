@@ -37,24 +37,17 @@ function ClaimSpace(Event, SelectedButton) {
 
 function CheckWinCondition() 
 {
-    if( b1.innerText != "." && b1.innerText == b2.innerText && b2.innerText == b3.innerText ||
-        b1.innerText != "." && b1.innerText == b5.innerText && b5.innerText == b9.innerText ||
-        b1.innerText != "." && b1.innerText == b4.innerText && b4.innerText == b7.innerText ||
-        b2.innerText != "." && b2.innerText == b5.innerText && b5.innerText == b8.innerText ||
-        b3.innerText != "." && b3.innerText == b5.innerText && b5.innerText == b7.innerText ||
-        b3.innerText != "." && b3.innerText == b6.innerText && b6.innerText == b9.innerText ||
-        b4.innerText != "." && b4.innerText == b5.innerText && b5.innerText == b6.innerText ||
-        b7.innerText != "." && b7.innerText == b8.innerText && b8.innerText == b9.innerText
-        )
-        {
-            
-            alert("Player " + currentPlayer.toUpperCase() + " wins!");
-            ClearBoard();
-            
-            
-        }
-
-    
+    if( b1.innerText != "" && b1.innerText == b2.innerText && b2.innerText == b3.innerText ||
+        b1.innerText != "" && b1.innerText == b5.innerText && b5.innerText == b9.innerText ||
+        b1.innerText != "" && b1.innerText == b4.innerText && b4.innerText == b7.innerText ||
+        b2.innerText != "" && b2.innerText == b5.innerText && b5.innerText == b8.innerText ||
+        b3.innerText != "" && b3.innerText == b5.innerText && b5.innerText == b7.innerText ||
+        b3.innerText != "" && b3.innerText == b6.innerText && b6.innerText == b9.innerText ||
+        b4.innerText != "" && b4.innerText == b5.innerText && b5.innerText == b6.innerText ||
+        b7.innerText != "" && b7.innerText == b8.innerText && b8.innerText == b9.innerText )
+    {   alert("Player " + currentPlayer.toUpperCase() + " wins!");
+        ClearBoard(); 
+    }
 }
 
 function ClearBoard() 
