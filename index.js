@@ -49,6 +49,8 @@ function CheckWinCondition()
         {
             
             console.log("win");
+            alert("Game Over");
+            
         }
 
     
