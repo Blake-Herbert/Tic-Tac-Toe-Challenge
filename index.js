@@ -16,13 +16,11 @@ const b8 = document.getElementById("b8");
 b8.addEventListener("click", ClaimSpace);
 const b9 = document.getElementById("b9");
 b9.addEventListener("click", ClaimSpace);
-
 const ClearBoardButton = document.getElementById("ClearBoardButton");
 ClearBoardButton.addEventListener("click",ClearBoard);
 
 let currentPlayer = "x";
 
-////////////////////////////////
 
 function ClaimSpace(Event, SelectedButton) {
     //console.log(Event.target.id);
@@ -51,7 +49,21 @@ function CheckWinCondition()
     {   alert("Player " + currentPlayer.toUpperCase() + " wins!");
         ClearBoard(); 
     }
+    else if ( 
+        b1.innerText != "" &&
+        b2.innerText != "" &&
+        b3.innerText != "" &&
+        b4.innerText != "" &&
+        b5.innerText != "" &&
+        b6.innerText != "" &&
+        b7.innerText != "" &&
+        b8.innerText != "" &&
+        b9.innerText != "")
+    {   alert("Draw");
+        ClearBoard();   
+    }
 }
+
 
 function ClearBoard() 
 {
