@@ -31,3 +31,8 @@ button{
     border: 1px;
     border-color: rgb(255, 230, 192);
 }
+
+.ClearBoardButton{
+    width: 320px;
+    position: relative; top: 10px;
+}
